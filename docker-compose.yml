@@ -15,7 +15,8 @@ services:
       - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
       - FABRIC_CA_SERVER_CA_NAME=ca.manufacturer.siam.com
       - FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.manufacturer.siam.com-cert.pem
-      - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/900763b90285ad754c3c354c69d2409d30f5fe3b2351a2dfa9a6a5d20c26ab1e_sk            ports:
+      - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/ae64b1b067fabe3c182a2c4f5c46cf25cbcb4fe7a574761db16aa664c57687ec_sk
+    ports:
       - "7054:7054"
     command: sh -c 'fabric-ca-server start -b admin:adminpw -d'
     volumes:
@@ -30,7 +31,8 @@ services:
       - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
       - FABRIC_CA_SERVER_CA_NAME=ca.rto.siam.com
       - FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.rto.siam.com-cert.pem
-      - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/cc04322e3614ea2bdc9d1bfbb48f0a30abf7773bc8aa152c7958387e39d562a3_sk            ports:
+      - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/6a6aebdb6c60d363fd55694305dd0e99b7cb7ee6d5ade332577a4f99016787cb_sk
+    ports:
       - "8054:7054"
     command: sh -c 'fabric-ca-server start -b admin:adminpw -d'
     volumes:
@@ -45,7 +47,8 @@ services:
       - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
       - FABRIC_CA_SERVER_CA_NAME=ca.owner.siam.com
       - FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.owner.siam.com-cert.pem
-      - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/7b929b88da8558df34501173010d8571b07b29be6207c5d7c48ae0bea43b780a_sk            ports:
+      - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/d846671736c1796e8fe08eeff59cd29a972074cba47582c9c3a37b48c6aa5eea_sk
+    ports:
       - "9054:7054"
     command: sh -c 'fabric-ca-server start -b admin:adminpw -d'
     volumes:
@@ -60,8 +63,9 @@ services:
       - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
       - FABRIC_CA_SERVER_CA_NAME=ca.scrp.siam.com
       - FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.scrp.siam.com-cert.pem
-      - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/7b929b88da8558df34501173010d8571b07b29be6207c5d7c48ae0bea43b780a_sk            ports:
-      - "9054:7054"
+      - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/b1c4e849205bb5779b13ef690883ae895d3d1ff7ae9991f421a94fbff18fca8c_sk
+    ports:
+      - "10054:7054"
     command: sh -c 'fabric-ca-server start -b admin:adminpw -d'
     volumes:
       - ./crypto-config/peerOrganizations/scrp.siam.com/ca/:/etc/hyperledger/fabric-ca-server-config
